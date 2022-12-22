@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.filter {
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 300%;
+    opacity: 0.4;
+}
+
+ul {
+    list-style: none;
+}
+
+.header img {
+    width: 100%;
+}
+
+.menu {
+    margin-left: 10px;
+}
+
+.menu h1 {
+    font-size: 215%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.menu p {
+    font-size: 130%;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    padding: 0;
+}
+
+.menu ul li {
+    min-width: 19%;
+    font-size: 150%;
+    margin-right: 10px;
+}
+
+.menu ul li button {
+    color: white;
+    background-color: #2D2D2D;
+    border: none;
+    border-radius: 2px;
+    padding: 4px;
+    height: 120%;
+    width: 100%;
+}
+
+#all button {
+    background-color: #A89158;
+}
+
+.items ul {
+    padding: 0;
+    margin: 10px;
+}
+
+.items ul li {
+    margin-bottom: 15px;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+}
+
+.item img {
+    width: 30%;
+    height: 30%;
+}
+
+
+.item-details {
+    margin-left: 1%;
+    width: 69%;
+}
+
+.item-details h1 {
+    font-size: 175%;
+    margin-top: 0;
+    margin-bottom: 5%;
+}
+
+.reviews {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.reviews-icon {
+    width: 3%;
+    height: 3%;
+}
+
+.reviews-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.reviews-number {
+    margin-top: 1%;
+    margin-left: 0.5%;
+    font-size: 95%;
+}
+
+.check-write-reviews {
+    display: flex;
+    flex-direction: row;
+    margin-left: 3%;
+}
+
+.check-write-reviews p {
+    margin-top: 4%;
+    margin-right: 15px;
+    font-size: 100%;
+    color: #38A1ED;
+}
+
+.price-add {
+    display: flex;
+    flex-direction: row;
+    margin-top: 13%;
+}
+
+.price {
+    flex-basis: 85%;
+    font-size: 130%;
+}
+
+.add {
+    height: 35px;
+    width: 15%;
+    margin-top: 1.5%;
+    background-color: white;
+    border: 1px solid rgb(103, 103, 103);
+    border-radius: 2px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ccc;
+}
+
+.subtotal {
+    font-size: 140%;
+    flex-basis: 60%;
+    text-align: right;
+}
+
+.footer button {
+    width: 15%;
+    font-size: 130%;
+    font-weight: bold;
+    margin-top: 8px;
+    height: 40px;
+    background-color: #2D2D2D;
+    color: white;
+    border-radius: 2px;
+    position: relative;
+    left: 24%;
+}
