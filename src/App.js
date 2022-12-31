@@ -1,10 +1,14 @@
-import './assets/style.css';
 import './assets/styles/home.css';
 
-import Router from './Router';
+ import Router from './Router';
+import Item from './components/Common/Item'
 
 function App() {
-    return <Router />;
+    return(
+        <div>
+            <Router />
+        </div>
+    )
 }
 
 export default App;

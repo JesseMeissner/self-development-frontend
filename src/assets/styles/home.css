@@ -164,13 +164,354 @@ ul {
 
 .footer button {
     width: 15%;
-    font-size: 130%;
+    font-size: 105%;
     font-weight: bold;
     margin-top: 8px;
-    height: 40px;
+    height: 50px;
     background-color: #2D2D2D;
     color: white;
     border-radius: 2px;
     position: relative;
     left: 24%;
 }
+
+.prompt-box {
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    width: 50%;
+    padding: 2%;
+    top: 65%;
+    left: 25%;
+}
+
+.x {
+    position: absolute;
+    bottom: 90%;
+    right: 1%;
+}
+
+.prompt-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.prompt-buttons button {
+    padding: 0;
+    margin-right: 2%;
+    border: none;
+}
+
+.prompt-buttons button img {
+    width: 100%;
+}
+
+#name {
+    width: 60%;
+    height: 40px;
+    border: 1px solid  rgb(120, 120, 120);
+    margin-top: 3%;
+    padding: 1%;
+    font-size: 140%;
+}
+
+#review-text {
+    width: 98%;
+    height: 200px;
+    margin-top: 2%;
+    padding: 1%;
+    border: 1px solid rgb(120, 120, 120);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 140%;
+    resize: none;
+}
+
+.prompt-box form p {
+    font-size: 120%;
+}
+
+#review-submit {
+    width: 30%;
+    padding: 1.5%;
+    margin-top: 2%;
+    font-size: 140%;
+    font-weight: bold;
+    background-color: white;
+}
+
+.review-name {
+    margin-top: 2%;
+}
+
+.review li {
+    margin-bottom: 2%;
+}
+
+.go-back-home {
+    color: #1C7BFD;
+    flex-basis: 40%;
+    text-align: right;
+    position: relative;
+    right: 1%;
+}
+
+
+/* MEDIA SCREENS */
+
+@media screen and (min-width: 400px) and (max-width: 451px) {
+    .menu h1 {
+        font-size: 160%;
+    }
+
+    .menu p {
+        font-size: 100%;
+    }
+
+    .menu ul li {
+        min-width: 18%;
+        margin-right: 5px;
+        font-size: 170%;
+    }
+
+    .menu ul li button {
+        font-size: 35%;
+        height: 100%;
+    }
+
+    .items ul li {
+        margin-bottom: 5px;
+    }
+
+    .item img {
+        width: 35%;
+    }
+
+    .item-details h1 {
+        font-size: 100%;
+    }
+
+    .reviews {
+        margin-bottom: 0;
+    }
+
+    .reviews-icon {
+        width: 7%;
+    }
+
+    .reviews-icon img {
+        width: 100%;
+    }
+
+    .reviews-number {
+        font-size: 70%;
+        margin-top: 2%;
+    }
+
+    .check-write-reviews p {
+        font-size: 70%;
+    }
+
+    .price-add {
+        margin-top: 0;
+    }
+
+    .price {
+        margin-top: 13px;
+        margin-bottom: 0;
+        font-size: 95%;
+    }
+
+    .add {
+        height: 20px;
+        width: 20%;
+        font-size: 70%;
+    }
+
+    .footer h1 {
+        font-size: 105%;
+    }
+
+    .footer button {
+        font-size: 63%;
+        margin-top: 1%;
+        width: 29%;
+        position: relative;
+        left: 10%;
+    }
+
+    .prompt-box {
+        top: 25%;
+    }
+
+    .x {
+        width: 15%;
+    }
+
+    .prompt-box h1 {
+        font-size: 140%;
+    }
+
+    .prompt-buttons button img {
+        width: 100%;
+    }
+
+    #name {
+        font-size: 100%;
+    }
+
+    #review-text {
+        font-size: 100%;
+    }
+
+    .review ul {
+        padding: 0;
+    }
+
+    .review ul li img {
+        width: 50%;
+    }
+
+    .review-name {
+        font-size: 100%;
+    }
+
+    .review ul li p {
+        font-size: 40%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .menu h1 {
+        font-size: 160%;
+    }
+
+    .menu p {
+        font-size: 80%;
+    }
+
+    .menu ul li {
+        min-width: 18%;
+        margin-right: 5px;
+    }
+
+    .menu ul li button {
+        font-size: 33%;
+        height: 100%;
+    }
+
+    .items ul li {
+        margin-bottom: 5px;
+    }
+
+    .item {
+        margin-bottom: 2%;
+    }
+
+    .item img {
+        width: 35%;
+    }
+
+    .item-details h1 {
+        font-size: 100%;
+    }
+
+    .reviews {
+        margin-bottom: 0;
+    }
+
+    .reviews-icon {
+        width: 7%;
+    }
+
+    .reviews-icon img {
+        width: 100%;
+    }
+
+    .reviews-number {
+        font-size: 70%;
+        margin-top: 2%;
+    }
+
+    .check-write-reviews p {
+        font-size: 70%;
+    }
+
+    .price-add {
+        margin-top: 0;
+    }
+
+    .price {
+        margin-top: 13px;
+        margin-bottom: 0;
+        font-size: 95%;
+    }
+
+    .add {
+        height: 20px;
+        width: 20%;
+        font-size: 65%;
+    }
+
+    .footer h1 {
+        font-size: 105%;
+    }
+
+    .footer button {
+        font-size: 55%;
+        margin-top: 1%;
+        width: 29%;
+        height: 40px;
+        position: relative;
+        left: 10%;
+    } 
+
+    .prompt-box {
+        top: 25%;
+    }
+
+    .x {
+        width: 15%;
+    }
+
+    .prompt-box h1 {
+        font-size: 140%;
+    }
+
+    .prompt-buttons button img {
+        width: 100%;
+    }
+
+    #name {
+        font-size: 100%;
+        width: 65%;
+    }
+
+    #review-text {
+        font-size: 100%;
+    }
+
+    .review ul {
+        padding: 0;
+    }
+
+    .review ul li img {
+        width: 50%;
+    }
+
+    .review-name {
+        font-size: 100%;
+    }
+
+    .review ul li p {
+        font-size: 40%;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .footer button {
+        height: 45px;
+        font-size: 90%;
+    }
+}
+

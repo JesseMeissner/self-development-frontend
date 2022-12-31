@@ -1,11 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './containers/Home';
-import Home1 from './containers/Home1';
+import WriteReview from './containers/Write-review'
+import CheckReviews from './containers/Check-reviews'
+import SelectedItems from './containers/Selected-items'
 
 const Router = () => {
     return (
         <Routes>
-            <Route path="/" element={<Home1 />} />
+            <Route path="/" element={<Home />} />
+            <Route path='write-review' element={<WriteReview />} />
+            <Route path='check-reviews' element={CheckReviews} />
+            <Route path='selected-items' element={SelectedItems} />
         </Routes>
     );
 };

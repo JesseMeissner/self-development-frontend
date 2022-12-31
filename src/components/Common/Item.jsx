@@ -1,36 +1,49 @@
 import ItemImg from '../../assets/img/images/item.png'
 import Heart from '../../assets/img/images/heart.png';
+import axios from 'axios';
+import { useState,useEffect } from 'react';
 
-const Item = () => {
+function  Item ()  {
+    const [item, setItem] = useState(null);
+    const [abc, setAbc] = useState("")
+
+    useEffect(() => {
+        const fetchData= ()=>{
+            axios.get('http://127.0.0.1:8000/items/').then((res) =>{
+                console.log(res.data);
+                setItem(res.data.results);
+            })
+        }
+        fetchData();
+        setAbc('2')
+    },[])
+    
     return (
-        <section class="items">
-                <ul>
-                    <li>
-                        <div class="item">
-                            <img class="reviews-image" src={ItemImg}></img>
-                            <div class="item-details">
-                                <h1>Chicken Makhani Burst + Lite</h1>
-                                <div class="reviews">
-                                    <div class="reviews-icon">
+        <div className='App'>
+            {item && item.length > 0 && item.map((i) => (
+                <div className='item'>
+                    <img class="reviews-image" src={i.image}></img>
+                            <div className="item-details">
+                                <h1>{i.name}</h1>
+                                <div className="reviews">
+                                    <div className="reviews-icon">
                                     <img src={Heart}></img>
                                     </div>
-                                    <p class="reviews-number">(16)</p>
-                                    <div class="check-write-reviews">
+                                    <p className="reviews-number">{i.likes}</p>
+                                    <div className="check-write-reviews">
                                         <p>Check Reviews</p>
                                         <p>Write Review</p>
                                     </div>
                                 </div>
-                                <div class="price-add">
-                                    <p class="price">$16</p>
-                                    <button class="add">Add +</button>
+                                <div className="price-add">
+                                    <p className="price">${i.price}</p>
+                                    <button className="add">Add +</button>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                    
-                </ul>
-            </section>
+                </div>
+            ))}
+        </div>
     )
 }
 
-export default Item
+export default Item;
