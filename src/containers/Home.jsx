@@ -3,14 +3,16 @@ import Header from "../components/Common/Header"
 import Item from "../components/Common/Item"
 import Menu from "../components/Common/Menu"
 
-const Home1 = () => {
+function Home1() {
+    const value = {}
+
     return (
-        <div>
-            <Header />
-            <Menu />
-            <Item />
-            <Footer />
-        </div>
+        <body>
+                <Header />
+                <Menu />
+                <Item />
+                <Footer />
+        </body>
     )
 }
 

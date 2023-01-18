@@ -2,8 +2,8 @@ const Menu = () => {
     return (
         <section class="menu">
                 <h1>How to order?</h1>
-                <p>Thank you for loading Cj Menu by QR code. <br></br>
-                Now, you can select your items below and show your order to our waiter
+                <p>Thank you for loading CJ Menu by QR code. <br></br>
+                Now, you can select your items below and show your order to our waiter.
                 </p>
                 <ul>
                     <li id="all">

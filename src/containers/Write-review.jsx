@@ -1,16 +1,18 @@
 import Footer from "../components/Common/Footer"
 import Header from "../components/Common/Header"
 import Item from "../components/Common/Item"
-import Menu from "../components/Common/Menu"
+import WriteReview from "../components/Write-reviews/write-reviews"
+import { Greyed } from "../components/Common/Greyed"
 
-const WriteReview = () => {
+const WriteReviews = () => {
     return (
-        <div>
-            <Header />
+        <body>
+            <Greyed />
             <Footer />
-        </div>
+            <WriteReview />
+        </body>
 
     )
 }
 
-export default WriteReview
+export default WriteReviews

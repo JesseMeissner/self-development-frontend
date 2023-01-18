@@ -2,17 +2,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     width: 100%;
     height: 100%;
 }
 
-.filter {
-    background-color: black;
-    position: absolute;
-    width: 100%;
-    height: 300%;
-    opacity: 0.4;
+.App {
+    margin-left: 1%;
 }
 
 ul {
@@ -24,7 +19,7 @@ ul {
 }
 
 .menu {
-    margin-left: 10px;
+    margin-left: 1%;
 }
 
 .menu h1 {
@@ -78,9 +73,15 @@ ul {
     flex-direction: row;
 }
 
+.image-container {
+    width: 40%;
+    height: 300px;
+    overflow: hidden;
+}
+
 .item img {
-    width: 30%;
-    height: 30%;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -98,7 +99,6 @@ ul {
 .reviews {
     display: flex;
     flex-direction: row;
-    margin-bottom: 30px;
 }
 
 .reviews-icon {
@@ -133,7 +133,7 @@ ul {
 .price-add {
     display: flex;
     flex-direction: row;
-    margin-top: 13%;
+    margin-top: 17%;
 }
 
 .price {
@@ -145,6 +145,7 @@ ul {
     height: 35px;
     width: 15%;
     margin-top: 1.5%;
+    margin-right: 1%;
     background-color: white;
     border: 1px solid rgb(103, 103, 103);
     border-radius: 2px;
@@ -154,16 +155,22 @@ ul {
     display: flex;
     flex-direction: row;
     border: 1px solid #ccc;
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+    background-color: white;
 }
 
 .subtotal {
     font-size: 140%;
-    flex-basis: 60%;
-    text-align: right;
+    flex-basis: 86%;
+    text-align: center;
+    position: relative;
+    left: 10%;
 }
 
 .footer button {
-    width: 15%;
+    width: 100%;
     font-size: 105%;
     font-weight: bold;
     margin-top: 8px;
@@ -172,7 +179,8 @@ ul {
     color: white;
     border-radius: 2px;
     position: relative;
-    left: 24%;
+    flex-basis: 14%;
+    right: 0;
 }
 
 .prompt-box {
@@ -180,15 +188,17 @@ ul {
     background-color: white;
     border: 1px solid black;
     width: 50%;
-    padding: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
     top: 65%;
     left: 25%;
 }
 
 .x {
-    position: absolute;
-    bottom: 90%;
-    right: 1%;
+    position: relative;
+    left: 95%;
+    height: 10%;
 }
 
 .prompt-buttons {
@@ -213,6 +223,10 @@ ul {
     margin-top: 3%;
     padding: 1%;
     font-size: 140%;
+}
+
+.review-specific {
+    margin-bottom: 7%;
 }
 
 #review-text {
@@ -241,6 +255,11 @@ ul {
 
 .review-name {
     margin-top: 2%;
+    margin-bottom: 0;
+}
+
+.review-review {
+    margin-top: 1%;
 }
 
 .review li {
@@ -253,8 +272,13 @@ ul {
     text-align: right;
     position: relative;
     right: 1%;
+    font-size: 125%;
+    top: 7%;
 }
 
+.greyed {
+    background-color: #ccc;
+}
 
 /* MEDIA SCREENS */
 

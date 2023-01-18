@@ -1,14 +1,14 @@
-import Footer from "../components/Common/Footer"
 import Header from "../components/Common/Header"
-import Item from "../components/Common/Item"
-import Menu from "../components/Common/Menu"
+import SelectedItem from "../components/Selected-items/Selected-items-item"
+import SelectedItemsFooter from "../components/Selected-items/selected-items-footer"
 
 const SelectedItems = () => {
     return (
-        <div>
+        <body>
             <Header />
-            <Footer />
-        </div>
+            <SelectedItem />
+            <SelectedItemsFooter />
+        </body>
     )
 }
 

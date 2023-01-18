@@ -1,14 +1,14 @@
+import Reviews from "../components/Check-reviews/Reviews"
 import Footer from "../components/Common/Footer"
-import Header from "../components/Common/Header"
-import Item from "../components/Common/Item"
-import Menu from "../components/Common/Menu"
+import { Greyed } from "../components/Common/Greyed"
 
 const CheckReviews = () => {
     return (
-        <div>
-            <Header />
+        <body>
+            <Greyed />
             <Footer />
-        </div>
+            <Reviews />
+        </body>
     )
 }
 

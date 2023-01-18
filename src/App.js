@@ -1,12 +1,17 @@
 import './assets/styles/home.css';
+import Router from './Router';
+import { ReviewContext } from './ReviewContext';
+import { useState } from 'react';
 
- import Router from './Router';
-import Item from './components/Common/Item'
 
 function App() {
+    const [value, setValue] = useState(null)
+
     return(
         <div>
-            <Router />
+            <ReviewContext.Provider value={{value, setValue}}>
+                <Router />
+            </ReviewContext.Provider>
         </div>
     )
 }
