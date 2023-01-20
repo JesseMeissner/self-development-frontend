@@ -3,29 +3,54 @@ import axios from 'axios';
 import { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ReviewContext } from '../../ReviewContext';
+import { FilterContext } from '../../FilterContext';
 
 function  Item ()  {
-    const {value, setValue} = useContext(ReviewContext)
+    const {value, setValue} = useContext(ReviewContext);
+    const {filter, setFilter} = useContext(FilterContext);
 
     const [item, setItem] = useState(null);
-    const [abc, setAbc] = useState("")
-    const [itemClicked, setItemClicked] = useState(0)
-    const [itemSelected, setItemSelected] = useState(null)
+    const [abc, setAbc] = useState("");
+    const [itemClicked, setItemClicked] = useState(0);
+    const [itemReviews, setItemReviews] = useState(null);
 
     useEffect(() => {
-        const fetchData= () => {
+        const fetchData = () => {
             axios.get('http://127.0.0.1:8000/items/').then((res) => {
-                setItem(res.data.results);
-
+                const filteredItem = res.data.results.filter(res => res.category === filter);  
+                filter === null ? setItem(res.data.results) : setItem(filteredItem);
             })
         }
-        fetchData();
-        setAbc('2')
-        },[])
 
-    function incrementItemClicked() {
-        setItemClicked(itemClicked + 1)
-        console.log(itemClicked)
+        const fetchReviews = () => {
+            axios.get('http://127.0.0.1:8000/reviews/').then((res) => {
+                setItemReviews(res.data.results);
+            })
+        }
+
+        fetchData();
+        fetchReviews();
+        setAbc('2');
+        },[filter])
+    
+    const handleCartsQuantityChange = (itemID) => {
+        axios.put(`http://127.0.0.1:8000/carts/update/${itemID}/`, {
+        }).then((res) => {
+            console.log(res);
+        }).catch(error => {
+            console.log(error);
+            console.log(itemID);
+        })
+    }
+
+    const createCart = () => {
+        axios.post('http://127.0.0.1:8000/carts/create/', {
+            quantity: 1
+        }).then((res) => {
+            console.log(res);
+        }).catch((error) => {
+            console.log(error);
+        })
     }
     
     return (
@@ -41,7 +66,7 @@ function  Item ()  {
                                 <div className="reviews-icon">
                                     <img src={Heart}></img>
                                 </div>
-                                <p className="reviews-number">{i.likes}</p>
+                                <p className="reviews-number"> {i.likes} </p>
                                 <div className="check-write-reviews">
                                     <Link to='/check-reviews' style={{ textDecoration: 'none' }}>
                                         <p onClick={() => setValue(i.id)} >Check Reviews</p>
@@ -53,7 +78,8 @@ function  Item ()  {
                             </div>
                             <div className="price-add">
                                 <p className="price">${i.price}</p>
-                                <button className="add" onClick={incrementItemClicked}>Add +</button>
+                                <button className="add" onClick={() => handleCartsQuantityChange(i.id)}>Add +</button>
+                                <button onClick={() => createCart()}></button>
                             </div>
                         </div>
                 </div>

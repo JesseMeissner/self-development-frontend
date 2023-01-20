@@ -44,7 +44,7 @@ function SelectedItem() {
                                 <div className="price-add">
                                     <p className="price">${i.item.price}</p>
                                     {i.quantity > 0 ? (
-                                        <button className="add"> {i.quantity} </button>
+                                        <button className="add add_selected"> <p>-</p> <p> {i.quantity} </p> <p>+</p> </button>
                                     ) : <button className="add" >Add +</button>}
                                     
                                 </div>

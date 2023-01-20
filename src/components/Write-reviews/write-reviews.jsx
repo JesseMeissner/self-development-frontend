@@ -24,7 +24,6 @@ const WriteReview = () => {
     }
 
     const handleSubmit = (event) => {
-        event.preventDefault();
         axios.post('http://127.0.0.1:8000/reviews/create/', {
             name: name,
             review: reviewText,

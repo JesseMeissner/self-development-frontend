@@ -1,4 +1,9 @@
+import { useContext } from "react"
+import { FilterContext } from "../../FilterContext"
+
 const Menu = () => {
+    const {filter, setFilter} = useContext(FilterContext)
+
     return (
         <section class="menu">
                 <h1>How to order?</h1>
@@ -7,19 +12,19 @@ const Menu = () => {
                 </p>
                 <ul>
                     <li id="all">
-                        <button>All</button>
+                        <button onClick={() => setFilter(null)}>All</button>
                     </li>
                     <li>
-                        <button>MAIN DISHES</button>
+                        <button onClick={() => setFilter(5)}>MAIN DISHES</button>
                     </li>
                     <li>
-                        <button>KIDS' MENUS</button>
+                        <button onClick={() => setFilter(6)}>KIDS' MENUS</button>
                     </li>
                     <li>
-                        <button>HOT BAGUETTE</button>
+                        <button onClick={() => setFilter(7)}>HOT BAGUETTE</button>
                     </li>
                     <li>
-                        <button>BURGER BAR</button>
+                        <button onClick={() => setFilter(8)}>BURGER BAR</button>
                     </li>
                 </ul>
             </section>
