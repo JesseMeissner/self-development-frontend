@@ -63,6 +63,15 @@ button:active {
     background-color: #A89158;
 }
 
+.selected-items-menu {
+    margin: 1%;
+    margin-bottom: 2%;
+}
+
+.selected-items-item {
+    margin-left: 1%;
+}
+
 .items ul {
     padding: 0;
     margin: 10px;

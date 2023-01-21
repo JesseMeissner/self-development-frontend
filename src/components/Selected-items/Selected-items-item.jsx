@@ -38,7 +38,7 @@ function SelectedItem() {
     }
 
     return (
-        <div>
+        <div className="selected-items-item">
             {selected && selected.length > 0 && selected.map((i) => (
                 <div className='selectedItems'>
                     <div className='item'>
