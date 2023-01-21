@@ -160,6 +160,12 @@ button:active {
     flex-direction: row;
 }
 
+.add_selected p {
+    flex-basis: 33%;
+    position: relative;
+    bottom: 15%;
+}
+
 .footer {
     display: flex;
     flex-direction: row;

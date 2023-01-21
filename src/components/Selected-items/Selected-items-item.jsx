@@ -15,7 +15,27 @@ function SelectedItem() {
         }
         
         fetchItems();
-    }, [])
+    }, [selected])
+
+    const handleCartsQuantityAdd = (itemID) => {
+        axios.put(`http://127.0.0.1:8000/carts/${itemID}/update`, {
+        }).then((res) => {
+            console.log(res);
+        }).catch(error => {
+            console.log(error);
+            console.log(itemID);
+        })
+    }
+
+    const handleCartsQuantityDecrement = (itemID) => {
+        axios.put(`http://127.0.0.1:8000/carts/${itemID}/decrement`, {
+        }).then((res) => {
+            console.log(res);
+        }).catch(error => {
+            console.log(error);
+            console.log(itemID);
+        })
+    }
 
     return (
         <div>
@@ -44,7 +64,7 @@ function SelectedItem() {
                                 <div className="price-add">
                                     <p className="price">${i.item.price}</p>
                                     {i.quantity > 0 ? (
-                                        <button className="add add_selected"> <p>-</p> <p> {i.quantity} </p> <p>+</p> </button>
+                                        <button className="add add_selected"> <p onClick={() => handleCartsQuantityDecrement(i.item.id)}>-</p> <p> {i.quantity} </p> <p onClick={() => handleCartsQuantityAdd(i.item.id)}>+</p> </button>
                                     ) : <button className="add" >Add +</button>}
                                     
                                 </div>

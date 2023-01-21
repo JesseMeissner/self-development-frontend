@@ -35,7 +35,7 @@ function  Item ()  {
     
 
     const handleCartsQuantityChange = (itemID) => {
-        axios.put(`http://127.0.0.1:8000/carts/update/${itemID}/`, {
+        axios.put(`http://127.0.0.1:8000/carts/${itemID}/update`, {
         }).then((res) => {
             console.log(res);
         }).catch(error => {

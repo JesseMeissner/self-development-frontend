@@ -4,9 +4,8 @@ import axios from 'axios'
 import { TotalContext } from '../../TotalContext.js'
 
 const Footer = () => {
-    const {total, setTotal} = useContext(TotalContext)
-
-    const [cart, setCart] = useState(null)
+    const {total, setTotal} = useContext(TotalContext);
+    const [cart, setCart] = useState(null);
 
     useEffect(() => {
         const fetchCarts = () => {
