@@ -45,7 +45,7 @@ ul {
     margin-right: 10px;
 }
 
-.menu ul li button {
+.menu-button button {
     color: white;
     background-color: #2D2D2D;
     border: none;
@@ -56,6 +56,10 @@ ul {
 }
 
 #all button {
+    background-color: #A89158;
+}
+
+button:active {
     background-color: #A89158;
 }
 

@@ -9,7 +9,7 @@ function SelectedItem() {
     useEffect(() => {
         const fetchItems = () => {
             axios.get('http://127.0.0.1:8000/carts/').then((res) => {
-                console.log(res.data);
+                console.log(res.data.results);
                 setSelected(res.data.results);
             })
         }
@@ -23,7 +23,7 @@ function SelectedItem() {
                 <div className='selectedItems'>
                     <div className='item'>
                         <div class="image-container">
-                            <img class="reviews-image" src={i.item.image}></img>
+                            <img class="reviews-image" src={`https://res.cloudinary.com/da5famezc/${i.item.image}`}></img>
                         </div>
                             <div className="item-details">
                                 <h1>{i.item.name}</h1>

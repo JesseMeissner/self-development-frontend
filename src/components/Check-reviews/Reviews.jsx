@@ -1,4 +1,4 @@
-import { useEffect, useContext } from 'react';
+import { useEffect, useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import X from '../../assets/img/images/x.png';
 import notGood from '../../assets/img/images/not-good.png';
@@ -6,7 +6,6 @@ import good from '../../assets/img/images/good.png';
 import veryGood from '../../assets/img/images/very-good.png';
 import excellent from '../../assets/img/images/excellent.png';
 import axios from 'axios';
-import { useState } from 'react';
 import { ReviewContext } from '../../ReviewContext';
 
 function Reviews() {

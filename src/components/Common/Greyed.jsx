@@ -1,17 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import HeaderImg from '../../assets/img/images/headerimg.png';
 import Heart from '../../assets/img/images/heart.png';
+import { FilterContext } from '../../FilterContext';
 
 export const Greyed = () => {
+    const {filter, setFilter} = useContext(FilterContext)
     const [item, setItem] = useState(null);
 
     useEffect(() => {
         const fetchData= () => {
             axios.get('http://127.0.0.1:8000/items/').then((res) =>{
                 console.log(res.data);
-                setItem(res.data.results);
-
+                const filteredItem = res.data.results.filter(res => res.category === filter);  
+                filter === null ? setItem(res.data.results) : setItem(filteredItem);
             })
         }
         fetchData();
@@ -29,19 +31,19 @@ export const Greyed = () => {
                 Now, you can select your items below and show your order to our waiter.
                 </p>
                 <ul>
-                    <li id="all">
+                    <li id="all" className="menu-button">
                         <button>All</button>
                     </li>
-                    <li>
+                    <li id="main-dishes" className="menu-button">
                         <button>MAIN DISHES</button>
                     </li>
-                    <li>
+                    <li id='kids-menus' className="menu-button">
                         <button>KIDS' MENUS</button>
                     </li>
-                    <li>
+                    <li id='hot-baguette' className="menu-button">
                         <button>HOT BAGUETTE</button>
                     </li>
-                    <li>
+                    <li id='burger-bar' className="menu-button">
                         <button>BURGER BAR</button>
                     </li>
                 </ul>
