@@ -69,7 +69,7 @@ export const Greyed = () => {
                                 </div>
                                 <div className="price-add">
                                     <p className="price">${i.price}</p>
-                                    <button className="add">Add +</button>
+                                    <button className="add" style={{backgroundColor: '#ccc'}}>Add +</button>
                                 </div>
                             </div>
                 </div>

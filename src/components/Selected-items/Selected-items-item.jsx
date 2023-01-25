@@ -9,7 +9,6 @@ function SelectedItem() {
     useEffect(() => {
         const fetchItems = () => {
             axios.get('http://127.0.0.1:8000/carts/').then((res) => {
-                console.log(res.data.results);
                 setSelected(res.data.results);
             })
         }
@@ -43,10 +42,10 @@ function SelectedItem() {
                 <div className='selectedItems'>
                     <div className='item'>
                         <div class="image-container">
-                            <img class="reviews-image" src={`https://res.cloudinary.com/da5famezc/${i.item.image}`}></img>
+                            <img class="reviews-image" src={i.item_serialized.image}></img>
                         </div>
                             <div className="item-details">
-                                <h1>{i.item.name}</h1>
+                                <h1>{i.item_serialized.name}</h1>
                                 <div className="reviews">
                                     <div className="reviews-icon">
                                     <img src={Heart}></img>
@@ -62,10 +61,10 @@ function SelectedItem() {
                                     </div>
                                 </div>
                                 <div className="price-add">
-                                    <p className="price">${i.item.price}</p>
-                                    {i.quantity > 0 ? (
-                                        <button className="add add_selected"> <p onClick={() => handleCartsQuantityDecrement(i.item.id)}>-</p> <p> {i.quantity} </p> <p onClick={() => handleCartsQuantityAdd(i.item.id)}>+</p> </button>
-                                    ) : <button className="add" >Add +</button>}
+                                    <p className="price">${i.item_serialized.price}</p>
+                                    {i.quantity > 1 ? (
+                                        <button className="add add_selected"> <p onClick={() => handleCartsQuantityDecrement(i.item)}>-</p> <p> {i.quantity} </p> <p onClick={() => handleCartsQuantityAdd(i.item)}>+</p> </button>
+                                    ) : <button className="add" onClick={() => handleCartsQuantityAdd(i.item)}>Add +</button>}
                                     
                                 </div>
                             </div>

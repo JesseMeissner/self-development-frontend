@@ -304,129 +304,9 @@ button:active {
     background-color: #ccc;
 }
 
-/* MEDIA SCREENS */
 
-@media screen and (min-width: 400px) and (max-width: 451px) {
-    .menu h1 {
-        font-size: 160%;
-    }
 
-    .menu p {
-        font-size: 100%;
-    }
-
-    .menu ul li {
-        min-width: 18%;
-        margin-right: 5px;
-        font-size: 170%;
-    }
-
-    .menu ul li button {
-        font-size: 35%;
-        height: 100%;
-    }
-
-    .items ul li {
-        margin-bottom: 5px;
-    }
-
-    .item img {
-        width: 35%;
-    }
-
-    .item-details h1 {
-        font-size: 100%;
-    }
-
-    .reviews {
-        margin-bottom: 0;
-    }
-
-    .reviews-icon {
-        width: 7%;
-    }
-
-    .reviews-icon img {
-        width: 100%;
-    }
-
-    .reviews-number {
-        font-size: 70%;
-        margin-top: 2%;
-    }
-
-    .check-write-reviews p {
-        font-size: 70%;
-    }
-
-    .price-add {
-        margin-top: 0;
-    }
-
-    .price {
-        margin-top: 13px;
-        margin-bottom: 0;
-        font-size: 95%;
-    }
-
-    .add {
-        height: 20px;
-        width: 20%;
-        font-size: 70%;
-    }
-
-    .footer h1 {
-        font-size: 105%;
-    }
-
-    .footer button {
-        font-size: 63%;
-        margin-top: 1%;
-        width: 29%;
-        position: relative;
-        left: 10%;
-    }
-
-    .prompt-box {
-        top: 25%;
-    }
-
-    .x {
-        width: 15%;
-    }
-
-    .prompt-box h1 {
-        font-size: 140%;
-    }
-
-    .prompt-buttons button img {
-        width: 100%;
-    }
-
-    #name {
-        font-size: 100%;
-    }
-
-    #review-text {
-        font-size: 100%;
-    }
-
-    .review ul {
-        padding: 0;
-    }
-
-    .review ul li img {
-        width: 50%;
-    }
-
-    .review-name {
-        font-size: 100%;
-    }
-
-    .review ul li p {
-        font-size: 40%;
-    }
-}
+/* MEDIA QUERIES */
 
 @media screen and (max-width: 400px) {
     .menu h1 {
@@ -438,8 +318,8 @@ button:active {
     }
 
     .menu ul li {
-        min-width: 18%;
-        margin-right: 5px;
+        min-width: 19%;
+        margin-right: 3px;
     }
 
     .menu ul li button {
@@ -455,8 +335,9 @@ button:active {
         margin-bottom: 2%;
     }
 
-    .item img {
-        width: 35%;
+    .image-container {
+        width: 37%;
+        height: 100px;
     }
 
     .item-details h1 {
@@ -500,25 +381,33 @@ button:active {
         font-size: 65%;
     }
 
-    .footer h1 {
-        font-size: 105%;
+    .subtotal {
+        font-size: 100%;
+        left: 13%;
+    }
+
+    .selected-items-subtotal {
+        left: 16%;
     }
 
     .footer button {
-        font-size: 55%;
-        margin-top: 1%;
-        width: 29%;
+        font-size: 60%;
         height: 40px;
+        width: 117%;
         position: relative;
-        left: 10%;
+        bottom: 10%;
+        right: 20%;
     } 
 
     .prompt-box {
         top: 25%;
+        width: 65%;
+        left: 16%;
     }
 
     .x {
-        width: 15%;
+        width: 10%;
+        left: 90%;
     }
 
     .prompt-box h1 {
@@ -538,6 +427,12 @@ button:active {
         font-size: 100%;
     }
 
+    #review-submit {
+        font-size: 100%;
+        height: 32px;
+        width: 45%;
+    }
+
     .review ul {
         padding: 0;
     }
@@ -552,6 +447,194 @@ button:active {
 
     .review ul li p {
         font-size: 40%;
+    }
+
+    .selected-items-menu h1 {
+        font-size: 150%;
+    }
+
+    .selected-items-menu {
+        font-size: 85%;
+    }
+
+    .add_selected p {
+        bottom: 41%;
+    }
+
+    .go-back-home-link {
+        width: 41%;
+    }
+
+    .go-back-home {
+        font-size: 90%;
+        right: 4%;
+        top: 5%;
+    }
+    
+}
+
+@media screen and (min-width: 400px) and (max-width: 500px) {
+    .menu h1 {
+        font-size: 160%;
+    }
+
+    .menu p {
+        font-size: 100%;
+    }
+
+    .menu ul li {
+        min-width: 19%;
+        margin-right: 3px;
+        height: 30px;
+    }
+
+    .menu ul li button {
+        font-size: 40%;
+        height: 100%;
+    }
+
+    .items ul li {
+        margin-bottom: 5px;
+    }
+
+    .item {
+        margin-bottom: 2%;
+    }
+
+    .image-container {
+        width: 37%;
+        height: 100px;
+    }
+
+    .item-details h1 {
+        font-size: 100%;
+    }
+
+    .reviews {
+        margin-bottom: 0;
+    }
+
+    .reviews-icon {
+        width: 7%;
+    }
+
+    .reviews-icon img {
+        width: 100%;
+    }
+
+    .reviews-number {
+        font-size: 70%;
+        margin-top: 2%;
+    }
+
+    .check-write-reviews p {
+        font-size: 70%;
+    }
+
+    .price-add {
+        margin-top: 0;
+    }
+
+    .price {
+        margin-top: 13px;
+        margin-bottom: 0;
+        font-size: 95%;
+    }
+
+    .add {
+        height: 20px;
+        width: 20%;
+        font-size: 65%;
+    }
+
+    .subtotal {
+        font-size: 100%;
+        left: 13%;
+    }
+
+    .selected-items-subtotal {
+        left: 16%;
+    }
+
+    .footer button {
+        font-size: 60%;
+        height: 40px;
+        width: 117%;
+        position: relative;
+        bottom: 10%;
+        right: 20%;
+    } 
+
+    .prompt-box {
+        top: 25%;
+        width: 65%;
+        left: 16%;
+    }
+
+    .x {
+        width: 10%;
+        left: 90%;
+    }
+
+    .prompt-box h1 {
+        font-size: 140%;
+    }
+
+    .prompt-buttons button img {
+        width: 100%;
+    }
+
+    #name {
+        font-size: 100%;
+        width: 65%;
+    }
+
+    #review-text {
+        font-size: 100%;
+    }
+
+    #review-submit {
+        font-size: 100%;
+        height: 32px;
+        width: 45%;
+    }
+
+    .review ul {
+        padding: 0;
+    }
+
+    .review ul li img {
+        width: 50%;
+    }
+
+    .review-name {
+        font-size: 100%;
+    }
+
+    .review ul li p {
+        font-size: 40%;
+    }
+
+    .selected-items-menu h1 {
+        font-size: 150%;
+    }
+
+    .selected-items-menu {
+        font-size: 85%;
+    }
+
+    .add_selected p {
+        bottom: 41%;
+    }
+
+    .go-back-home-link {
+        width: 41%;
+    }
+
+    .go-back-home {
+        font-size: 90%;
+        right: 4%;
+        top: 5%;
     }
     
 }

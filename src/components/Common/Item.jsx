@@ -10,7 +10,8 @@ function  Item ()  {
     const {filter, setFilter} = useContext(FilterContext);
 
     const [item, setItem] = useState(null);
-    const [abc, setAbc] = useState("");
+    const [cart, setCart] = useState(null);
+    const [itemInCart, setItemInCart] = useState(null);
     const [itemReviews, setItemReviews] = useState(null);
 
     useEffect(() => {
@@ -28,11 +29,17 @@ function  Item ()  {
             })
         }
 
+        const fetchCarts = () => {
+            axios.get('http://127.0.0.1:8000/carts/').then((res) => {
+                setCart(res.data.results);
+                console.log(res.data.results)
+            })
+        }
+
         fetchData();
         fetchReviews();
-        setAbc('2');
-        },[filter])
-    
+        fetchCarts();
+        },[filter, itemInCart])
 
     const handleCartsQuantityChange = (itemID) => {
         axios.put(`http://127.0.0.1:8000/carts/${itemID}/update`, {
@@ -44,14 +51,24 @@ function  Item ()  {
         })
     }
 
-    const createCart = () => {
-        axios.post('http://127.0.0.1:8000/carts/create/', {
-            quantity: 1
+    const createCart = (it) => {
+        it === null ?
+        console.log('item is not defined')
+        : axios.post('http://127.0.0.1:8000/carts/create/', {
+            item: it.id,
+            quantity: 1,
         }).then((res) => {
-            console.log(res);
+            console.log(it.id);
         }).catch((error) => {
             console.log(error);
+            console.log(it.id);
         })
+    }
+
+    const isItemInCart = (itemID, item, id) => {
+        const itemInC = cart.find(c => c.item === itemID)
+        setItemInCart(itemInC)
+        itemInC ? handleCartsQuantityChange(id) : createCart(item)
     }
 
     return (
@@ -82,7 +99,7 @@ function  Item ()  {
                             </div>
                             <div className="price-add">
                                 <p className="price">${i.price}</p>
-                                <button className="add" onClick={() => handleCartsQuantityChange(i.id)}>Add +</button>
+                                <button className="add" onClick={() => isItemInCart(i.id, i, i.id)}>Add +</button>
                             </div>
                         </div>
                 </div>

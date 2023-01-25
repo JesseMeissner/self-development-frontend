@@ -12,7 +12,7 @@ const SelectedItemsFooter = () => {
         const fetchCarts = () => {
             axios.get('http://127.0.0.1:8000/carts/').then((res) => {
                 setCart(res.data.results);
-                setTotal(res.data.results.reduce((acc, cur) => acc + cur.item.price * cur.quantity, 0));
+                setTotal(res.data.results.reduce((acc, cur) => acc + cur.item_serialized.price * cur.quantity, 0));
             })
         }
         fetchCarts()
@@ -20,8 +20,8 @@ const SelectedItemsFooter = () => {
 
     return (
         <section class="footer">
-            <h1 className="subtotal">Subtotal: ${total}</h1>
-            <Link to='/' style={{textDecoration: 'none'}}>
+            <h1 className="subtotal selected-items-subtotal">Subtotal: ${total}</h1>
+            <Link className="go-back-home-link" to='/' style={{textDecoration: 'none'}}>
                 <h1 className="go-back-home">← Go back Home</h1>
             </Link>
         </section>
