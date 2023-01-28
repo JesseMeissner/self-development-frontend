@@ -195,7 +195,7 @@ button:active {
 
 .footer button {
     width: 100%;
-    font-size: 105%;
+    font-size: 90%;
     font-weight: bold;
     margin-top: 8px;
     height: 50px;
@@ -221,8 +221,9 @@ button:active {
 
 .x {
     position: relative;
-    left: 95%;
+    left: 97%;
     height: 10%;
+    width: 5%;
 }
 
 .prompt-buttons {
@@ -308,7 +309,177 @@ button:active {
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 375px) {
+    .menu h1 {
+        font-size: 160%;
+    }
+
+    .menu p {
+        font-size: 80%;
+    }
+
+    .menu ul li {
+        min-width: 19%;
+        margin-right: 3px;
+        font-size: 70%;
+    }
+
+    .menu ul li button {
+        font-size: 40%;
+    }
+
+    .items ul li {
+        margin-bottom: 5px;
+    }
+
+    .item {
+        margin-bottom: 2%;
+    }
+
+    .image-container {
+        width: 37%;
+        height: 100px;
+    }
+
+    .item-details h1 {
+        font-size: 79%;
+    }
+
+    .check-write-reviews {
+        font-size: 85%;
+    }
+
+    .reviews {
+        margin-bottom: 0;
+    }
+
+    .reviews-icon {
+        width: 7%;
+    }
+
+    .reviews-icon img {
+        width: 100%;
+    }
+
+    .reviews-number {
+        font-size: 70%;
+        margin-top: 2%;
+    }
+
+    .check-write-reviews p {
+        font-size: 70%;
+    }
+
+    .price-add {
+        margin-top: 10%;
+    }
+
+    .price {
+        margin-top: 13px;
+        margin-bottom: 0;
+        font-size: 85%;
+    }
+
+    .add {
+        height: 20px;
+        width: 25%;
+        font-size: 65%;
+        margin-top: 5%;
+    }
+
+    .subtotal {
+        font-size: 100%;
+        left: 13%;
+    }
+
+    .selected-items-subtotal {
+        left: 16%;
+    }
+
+    .footer button {
+        font-size: 60%;
+        height: 35px;
+        width: 100%;
+        position: relative;
+        bottom: 7%;
+        right: 4%;
+    } 
+
+    .prompt-box {
+        top: 25%;
+        width: 65%;
+        left: 16%;
+    }
+
+    .x {
+        width: 10%;
+        left: 90%;
+    }
+
+    .prompt-box h1 {
+        font-size: 140%;
+    }
+
+    .prompt-buttons button img {
+        width: 100%;
+    }
+
+    #name {
+        font-size: 100%;
+        width: 65%;
+    }
+
+    #review-text {
+        font-size: 100%;
+    }
+
+    #review-submit {
+        font-size: 100%;
+        height: 32px;
+        width: 60%;
+    }
+
+    .review ul {
+        padding: 0;
+    }
+
+    .review ul li img {
+        width: 50%;
+    }
+
+    .review-name {
+        font-size: 100%;
+    }
+
+    .review ul li p {
+        font-size: 40%;
+    }
+
+    .selected-items-menu h1 {
+        font-size: 150%;
+    }
+
+    .selected-items-menu {
+        font-size: 85%;
+    }
+
+    .add_selected p {
+        bottom: 41%;
+    }
+
+    .go-back-home-link {
+        width: 41%;
+    }
+
+    .go-back-home {
+        font-size: 85%;
+        right: 4%;
+        top: 5%;
+    }
+    
+}
+
+@media screen and (min-width: 375px) and (max-width: 400px) {
     .menu h1 {
         font-size: 160%;
     }
@@ -639,10 +810,152 @@ button:active {
     
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 500px) and (max-width: 541px) {
+    .menu ul li {
+        margin-right: 3px;
+    }
+
+    .image-container {
+        height: 200px;
+    }
+
+    .item-details h1 {
+        font-size: 145%;
+    }
+
+    .reviews-icon {
+        width: 7%;
+    }
+
+    .add {
+        margin-top: 4%;
+    }
+
+    .subtotal {
+        left: 15%;
+    }
+
+    .selected-items-subtotal {
+        left: 17%;
+    }
+
     .footer button {
-        height: 45px;
-        font-size: 90%;
+        width: 120%;
+        font-size: 100%;
+        right: 22%;
+        bottom: 2%;
+    }
+
+    .go-back-home-link {
+        width: 40%;
+    }
+
+    .go-back-home {
+        right: 4%;
+    }
+
+    .x {
+        width: 10%;
+        left: 92%;
+    }
+
+    #name {
+        font-size: 100%;
+    }
+
+    #review-text {
+        font-size: 100%;
+    }
+
+    #review-submit {
+        font-size: 110%;
+        width: 45%;
+        height: 35px;
+    }
+
+}
+
+@media screen and (min-width: 541px) and (max-width: 1000px) {
+    .menu ul li {
+        min-width: 19.3%;
+        margin-right: 5px;
+    }
+
+    .image-container {
+        height: 240px;
+    }
+
+    .reviews-icon {
+        width: 5%;
+    }
+
+    .reviews-number {
+        font-size: 130%;
+    }
+
+    .check-write-reviews p {
+        font-size: 120%;
+    }
+
+    .price-add {
+        margin-top: 15%;
+    }
+
+    .footer {
+        font-size: 130%;
+    }
+
+    .footer button {
+        width: 120%;
+        right: 22%;
+        height: 65px;
+    }
+
+    .subtotal {
+        left: 12%;
+    }
+    
+    .selected-items-subtotal {
+        left: 15.5%;
+    }
+
+    .go-back-home-link {
+        width: 41%;
+    }
+
+    .go-back-home {
+        right: 5%;
+    }
+
+    .x {
+        width: 10%;
+        left: 92%;
+    }
+
+    #review-submit {
+        width: 40%;
+        padding: 2%;
     }
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1230px) {
+    .price-add {
+        margin-top: 23%;
+    }
+    
+    .footer button {
+        width: 105%;
+        height: 50px;
+        font-size: 90%;
+        right: 8%;
+        margin-top: 4.5%;
+    }
+
+    .go-back-home-link {
+        width: 17%;
+    }
+
+    .go-back-home {
+        right: 5%;
+    }
+}

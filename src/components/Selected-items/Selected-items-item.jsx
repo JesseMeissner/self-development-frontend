@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 function SelectedItem() {
     const [selected, setSelected] = useState(null)
+    const [itemReviews, setItemReviews] = useState(null)
 
     useEffect(() => {
         const fetchItems = () => {
@@ -12,8 +13,15 @@ function SelectedItem() {
                 setSelected(res.data.results);
             })
         }
+
+        const fetchReviews = () => {
+            axios.get('http://127.0.0.1:8000/reviews/').then((res) => {
+                setItemReviews(res.data.results);
+            })
+        }
         
         fetchItems();
+        fetchReviews();
     }, [selected])
 
     const handleCartsQuantityAdd = (itemID) => {
@@ -38,7 +46,10 @@ function SelectedItem() {
 
     return (
         <div className="selected-items-item">
-            {selected && selected.length > 0 && selected.map((i) => (
+            {selected && selected.length > 0 && selected.map((i) => {
+                const filteredReviews = itemReviews.filter((review) => review.item === i.item_serialized.id)
+                const totalLikes = filteredReviews.reduce((acc, review) => acc + review.likes, 0)
+                return (
                 <div className='selectedItems'>
                     <div className='item'>
                         <div class="image-container">
@@ -50,7 +61,7 @@ function SelectedItem() {
                                     <div className="reviews-icon">
                                     <img src={Heart}></img>
                                     </div>
-                                    <p className="reviews-number">{i.item.likes}</p>
+                                    <p className="reviews-number">{totalLikes}</p>
                                     <div className="check-write-reviews">
                                         <Link to='/check-reviews' style={{ textDecoration: 'none' }}>
                                         <p>Check Reviews</p>
@@ -70,7 +81,8 @@ function SelectedItem() {
                             </div>
                     </div>
                 </div>
-            ))}
+            )}
+            )}
         </div>
     )
 }
