@@ -5,12 +5,12 @@ import SelectedItemsMenu from "../components/Selected-items/selected-items-menu"
 
 const SelectedItems = () => {
     return (
-        <body>
+        <div>
             <Header />
             <SelectedItemsMenu />
             <SelectedItem />
             <SelectedItemsFooter />
-        </body>
+        </div>
     )
 }
 

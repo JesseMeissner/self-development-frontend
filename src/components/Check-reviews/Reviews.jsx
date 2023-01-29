@@ -35,20 +35,20 @@ function Reviews() {
     }, []) // , [reviews])
 
     return (
-        <div class="prompt-box">
+        <div className="prompt-box">
             <Link to='/'>
-                <img class="x" src={X}></img>
+                <img className="x" src={X}></img>
             </Link>
             <h1>Reviews for "{specificItem ? specificItem.name : 'Loading...'}"</h1>
-            <div class="review">
+            <div className="review">
                 {reviews && reviews.length > 0 && reviews.map((review) => (
-                    <div class="review-specific">
+                    <div key={review.name} className="review-specific">
                         {review.likes === 0 && <img src={notGood}></img>}
                         {review.likes === 1 && <img src={good}></img>}
                         {review.likes === 2 && <img src={veryGood}></img>}
                         {review.likes === 3 && <img src={excellent}></img>}
-                        <h2 class="review-name"> {review.name} </h2>
-                        <p class="review-review"> {review.review} </p>
+                        <h2 className="review-name"> {review.name} </h2>
+                        <p className="review-review"> {review.review} </p>
                     </div>
                 ))}
             </div>

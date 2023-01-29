@@ -40,14 +40,14 @@ const WriteReview = () => {
     }
 
     return (
-        <div class="prompt-box">
+        <div className="prompt-box">
             <form onSubmit={handleSubmit}>
                 <Link to="/">
-                    <img class="x" src={x} />
+                    <img className="x" src={x} />
                 </Link>
                 <h1>Write Review</h1>
                 <p>Choose your thought</p>
-                <div class="prompt-buttons">
+                <div className="prompt-buttons">
                     <button onClick={() => setReviewLikes(1)}> <img src={good} /> </button>
                     <button onClick={() => setReviewLikes(2)}> <img src={veryGood} /> </button>
                     <button onClick={() => setReviewLikes(3)}> <img src={excellent} /> </button>

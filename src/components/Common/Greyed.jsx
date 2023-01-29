@@ -20,12 +20,12 @@ export const Greyed = () => {
         },[])
 
     return (
-        <div class="greyed">
-            <section class="header">
+        <div className="greyed">
+            <section className="header">
                 <img src={HeaderImg} alt='header'></img>
             </section>
 
-            <section class="menu">
+            <section className="menu">
                 <h1>How to order?</h1>
                 <p>Thank you for loading CJ Menu by QR code. <br></br>
                 Now, you can select your items below and show your order to our waiter.
@@ -51,9 +51,9 @@ export const Greyed = () => {
 
             <div className='App'>
             {item && item.length > 0 && item.map((i) => (
-                <div className='item'>
-                    <div class="image-container">
-                        <img class="reviews-image" src={i.image}></img>
+                <div key={i.name} className='item'>
+                    <div className="image-container">
+                        <img className="reviews-image" src={i.image}></img>
                     </div>
                             <div className="item-details">
                                 <h1>{i.name}</h1>

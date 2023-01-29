@@ -77,9 +77,9 @@ function  Item ()  {
                 const filteredReviews = itemReviews.filter((review) => review.item === i.id)
                 const totalLikes = filteredReviews.reduce((acc, review) => acc + review.likes, 0)
                 return (
-                <div className='item'>
-                    <div class="image-container">
-                        <img class="reviews-image" src={i.image}></img>
+                <div key={i.name} className='item'>
+                    <div className="image-container">
+                        <img className="reviews-image" src={i.image}></img>
                     </div>
                         <div className="item-details">
                             <h1>{i.name}</h1>

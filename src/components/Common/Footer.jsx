@@ -18,8 +18,8 @@ const Footer = () => {
     }, [cart])
 
     return (
-            <section class="footer">
-                <h1 class="subtotal">Subtotal: ${total}</h1>
+            <section className="footer">
+                <h1 className="subtotal">Subtotal: ${total}</h1>
                 <Link to='/selected-items' style={{textDecoration: 'none'}}>
                     <button>Check selected items</button>
                 </Link>

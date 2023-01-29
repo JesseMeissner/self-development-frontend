@@ -4,11 +4,11 @@ import { Greyed } from "../components/Common/Greyed"
 
 const CheckReviews = () => {
     return (
-        <body>
+        <div>
             <Greyed />
             <Footer />
             <Reviews />
-        </body>
+        </div>
     )
 }
 

@@ -3,17 +3,17 @@ import Header from "../components/Common/Header"
 import Item from "../components/Common/Item"
 import Menu from "../components/Common/Menu"
 
-function Home1() {
+const Home = () => {
     const value = {}
 
     return (
-        <body>
+        <div>
                 <Header />
                 <Menu />
                 <Item />
                 <Footer />
-        </body>
+        </div>
     )
 }
 
-export default Home1
+export default Home

@@ -47,13 +47,13 @@ function SelectedItem() {
     return (
         <div className="selected-items-item">
             {selected && selected.length > 0 && selected.map((i) => {
-                const filteredReviews = itemReviews.filter((review) => review.item === i.item_serialized.id)
-                const totalLikes = filteredReviews.reduce((acc, review) => acc + review.likes, 0)
+                const filteredReviews = itemReviews && itemReviews.filter((review) => review.item === i.item_serialized.id)
+                const totalLikes = filteredReviews && filteredReviews.reduce((acc, review) => acc + review.likes, 0)
                 return (
-                <div className='selectedItems'>
+                <div key={i.item} className='selectedItems'>
                     <div className='item'>
-                        <div class="image-container">
-                            <img class="reviews-image" src={i.item_serialized.image}></img>
+                        <div className="image-container">
+                            <img className="reviews-image" src={i.item_serialized.image}></img>
                         </div>
                             <div className="item-details">
                                 <h1>{i.item_serialized.name}</h1>

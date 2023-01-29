@@ -5,7 +5,7 @@ const Menu = () => {
     const {filter, setFilter} = useContext(FilterContext)
 
     return (
-        <section class="menu">
+        <section className="menu">
                 <h1>How to order?</h1>
                 <p>Thank you for loading CJ Menu by QR code. <br></br>
                 Now, you can select your items below and show your order to our waiter.

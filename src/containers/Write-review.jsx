@@ -6,11 +6,11 @@ import { Greyed } from "../components/Common/Greyed"
 
 const WriteReviews = () => {
     return (
-        <body>
+        <div>
             <Greyed />
             <Footer />
             <WriteReview />
-        </body>
+        </div>
 
     )
 }

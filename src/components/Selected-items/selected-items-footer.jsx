@@ -19,7 +19,7 @@ const SelectedItemsFooter = () => {
     }, [cart])
 
     return (
-        <section class="footer">
+        <section className="footer">
             <h1 className="subtotal selected-items-subtotal">Subtotal: ${total}</h1>
             <Link className="go-back-home-link" to='/' style={{textDecoration: 'none'}}>
                 <h1 className="go-back-home">← Go back Home</h1>
