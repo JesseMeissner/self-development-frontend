@@ -17,7 +17,6 @@ function  Item ()  {
     useEffect(() => {
         const fetchData = () => {
             axios.get('http://127.0.0.1:8000/items/').then((res) => {
-                console.log(res.data.results)
                 const filteredItem = res.data.results.filter(res => res.category === filter);  
                 filter === null ? setItem(res.data.results) : setItem(filteredItem);
             })
@@ -32,7 +31,6 @@ function  Item ()  {
         const fetchCarts = () => {
             axios.get('http://127.0.0.1:8000/carts/').then((res) => {
                 setCart(res.data.results);
-                console.log(res.data.results)
             })
         }
 

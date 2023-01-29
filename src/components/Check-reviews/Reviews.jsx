@@ -18,7 +18,6 @@ function Reviews() {
             axios.get('http://127.0.0.1:8000/reviews/').then((res) => {
                 const filteredResults = res.data.results.filter(res => res.item === value);
                 setReviews(filteredResults);
-                console.log(filteredResults);
             })
         }
 
@@ -26,7 +25,6 @@ function Reviews() {
             axios.get('http://127.0.0.1:8000/items/').then((res) => {
                 const filteredItem = res.data.results.filter(res => res.id === value)
                 setSpecificItem(filteredItem[0]);
-                console.log(specificItem);
             })
         }
 
