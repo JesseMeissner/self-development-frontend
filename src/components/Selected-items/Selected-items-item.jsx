@@ -9,13 +9,13 @@ function SelectedItem() {
 
     useEffect(() => {
         const fetchItems = () => {
-            axios.get('http://127.0.0.1:8000/carts/').then((res) => {
+            axios.get('https://self-development-backend.jessemeissner1.repl.co/carts/').then((res) => {
                 setSelected(res.data.results);
             })
         }
 
         const fetchReviews = () => {
-            axios.get('http://127.0.0.1:8000/reviews/').then((res) => {
+            axios.get('https://self-development-backend.jessemeissner1.repl.co/reviews/').then((res) => {
                 setItemReviews(res.data.results);
             })
         }
@@ -25,7 +25,7 @@ function SelectedItem() {
     }, [selected])
 
     const handleCartsQuantityAdd = (itemID) => {
-        axios.put(`http://127.0.0.1:8000/carts/${itemID}/update`, {
+        axios.put(`https://self-development-backend.jessemeissner1.repl.co/carts/${itemID}/update`, {
         }).then((res) => {
             console.log(res);
         }).catch(error => {
@@ -35,7 +35,7 @@ function SelectedItem() {
     }
 
     const handleCartsQuantityDecrement = (itemID) => {
-        axios.put(`http://127.0.0.1:8000/carts/${itemID}/decrement`, {
+        axios.put(`https://self-development-backend.jessemeissner1.repl.co/carts/${itemID}/decrement`, {
         }).then((res) => {
             console.log(res);
         }).catch(error => {

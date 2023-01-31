@@ -10,7 +10,7 @@ const SelectedItemsFooter = () => {
 
     useEffect(() => {
         const fetchCarts = () => {
-            axios.get('http://127.0.0.1:8000/carts/').then((res) => {
+            axios.get('https://self-development-backend.jessemeissner1.repl.co/carts/').then((res) => {
                 setCart(res.data.results);
                 setTotal(res.data.results.reduce((acc, cur) => acc + cur.item_serialized.price * cur.quantity, 0));
             })
