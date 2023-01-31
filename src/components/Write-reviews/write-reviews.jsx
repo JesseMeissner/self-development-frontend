@@ -24,7 +24,7 @@ const WriteReview = () => {
     }
 
     const handleSubmit = (event) => {
-        axios.post('http://127.0.0.1:8000/reviews/create/', {
+        axios.post('https://self-development-backend.jessemeissner1.repl.co/reviews/create/', {
             name: name,
             review: reviewText,
             likes: reviewLikes,

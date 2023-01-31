@@ -16,20 +16,20 @@ function  Item ()  {
 
     useEffect(() => {
         const fetchData = () => {
-            axios.get('http://127.0.0.1:8000/items/').then((res) => {
+            axios.get('https://self-development-backend.jessemeissner1.repl.co/items/').then((res) => {
                 const filteredItem = res.data.results.filter(res => res.category === filter);  
                 filter === null ? setItem(res.data.results) : setItem(filteredItem);
             })
         }
 
         const fetchReviews = () => {
-            axios.get('http://127.0.0.1:8000/reviews/').then((res) => {
+            axios.get('https://self-development-backend.jessemeissner1.repl.co/reviews/').then((res) => {
                 setItemReviews(res.data.results);
             })
         }
 
         const fetchCarts = () => {
-            axios.get('http://127.0.0.1:8000/carts/').then((res) => {
+            axios.get('https://self-development-backend.jessemeissner1.repl.co/carts/').then((res) => {
                 setCart(res.data.results);
             })
         }
@@ -40,7 +40,7 @@ function  Item ()  {
         },[filter, itemInCart])
 
     const handleCartsQuantityChange = (itemID) => {
-        axios.put(`http://127.0.0.1:8000/carts/${itemID}/update`, {
+        axios.put(`https://self-development-backend.jessemeissner1.repl.co/carts/${itemID}/update`, {
         }).then((res) => {
             console.log(res);
         }).catch(error => {
@@ -52,7 +52,7 @@ function  Item ()  {
     const createCart = (it) => {
         it === null ?
         console.log('item is not defined')
-        : axios.post('http://127.0.0.1:8000/carts/create/', {
+        : axios.post('https://self-development-backend.jessemeissner1.repl.co/carts/create/', {
             item: it.id,
             quantity: 1,
         }).then((res) => {

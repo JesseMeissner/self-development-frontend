@@ -15,14 +15,14 @@ function Reviews() {
 
     useEffect(() => {
         const fetchReviews = () => {
-            axios.get('http://127.0.0.1:8000/reviews/').then((res) => {
+            axios.get('https://self-development-backend.jessemeissner1.repl.co/reviews/').then((res) => {
                 const filteredResults = res.data.results.filter(res => res.item === value);
                 setReviews(filteredResults);
             })
         }
 
         const fetchItems = () => {
-            axios.get('http://127.0.0.1:8000/items/').then((res) => {
+            axios.get('https://self-development-backend.jessemeissner1.repl.co/items/').then((res) => {
                 const filteredItem = res.data.results.filter(res => res.id === value)
                 setSpecificItem(filteredItem[0]);
             })

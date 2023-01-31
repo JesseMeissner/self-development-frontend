@@ -10,7 +10,7 @@ export const Greyed = () => {
 
     useEffect(() => {
         const fetchData= () => {
-            axios.get('http://127.0.0.1:8000/items/').then((res) =>{
+            axios.get('https://self-development-backend.jessemeissner1.repl.co/items/').then((res) =>{
                 const filteredItem = res.data.results.filter(res => res.category === filter);  
                 filter === null ? setItem(res.data.results) : setItem(filteredItem);
             })
