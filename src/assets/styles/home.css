@@ -164,15 +164,27 @@ button:active {
     border-radius: 2px;
 }
 
-.add_selected {
+.add_selected_over_one {
     display: flex;
     flex-direction: row;
 }
 
-.add_selected p {
+.add_selected_over_one p {
     flex-basis: 33%;
     position: relative;
     bottom: 15%;
+}
+
+.add_selected_one {
+    display: flex;
+    flex-direction: row;
+}
+
+.add_selected_one p {
+    flex-basis: 33%;
+    position: relative;
+    bottom: 15%;
+    left: 33%;
 }
 
 .footer {
@@ -463,7 +475,11 @@ button:active {
         font-size: 85%;
     }
 
-    .add_selected p {
+    .add_selected_over_one p {
+        bottom: 41%;
+    }
+
+    .add_selected_one p {
         bottom: 41%;
     }
 
@@ -628,7 +644,11 @@ button:active {
         font-size: 85%;
     }
 
-    .add_selected p {
+    .add_selected_over_one p {
+        bottom: 41%;
+    }
+
+    .add_selected_one p {
         bottom: 41%;
     }
 
@@ -794,7 +814,11 @@ button:active {
         font-size: 85%;
     }
 
-    .add_selected p {
+    .add_selected_over_one p {
+        bottom: 41%;
+    }
+
+    .add_selected_one p {
         bottom: 41%;
     }
 

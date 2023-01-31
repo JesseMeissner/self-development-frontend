@@ -74,8 +74,8 @@ function SelectedItem() {
                                 <div className="price-add">
                                     <p className="price">${i.item_serialized.price}</p>
                                     {i.quantity > 1 ? (
-                                        <button className="add add_selected"> <p onClick={() => handleCartsQuantityDecrement(i.item)}>-</p> <p> {i.quantity} </p> <p onClick={() => handleCartsQuantityAdd(i.item)}>+</p> </button>
-                                    ) : <button className="add" onClick={() => handleCartsQuantityAdd(i.item)}>Add +</button>}
+                                        <button className="add add_selected_over_one"> <p onClick={() => handleCartsQuantityDecrement(i.item)}> -</p> <p> {i.quantity} </p> <p onClick={() => handleCartsQuantityAdd(i.item)}>+</p> </button>
+                                    ) : <button className="add add_selected_one" onClick={() => handleCartsQuantityAdd(i.item)}> <p>1</p> <p>+</p> </button>}
                                     
                                 </div>
                             </div>
